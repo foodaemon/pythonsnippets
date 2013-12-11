@@ -8,12 +8,19 @@ class Npi(Document):
     middle_initial = StringField(max_length=50, required=True)
     last_name = StringField(max_length=50, required=True)
 
-npi_list = Npi()
 
-npi_list.npi = '001'
-npi_list.first_name = "foo"
-npi_list.middle_initial = ""
-npi_list.last_name = "bar"
+def save_npi():
+    npi_list = Npi()
 
-npi_list.save()
+    npi_list.npi = '001'
+    npi_list.first_name = "foo"
+    npi_list.middle_initial = ""
+    npi_list.last_name = "bar"
 
+    npi_list.save()
+
+def list_npi():
+    for npi in Npi.objects:
+        print npi.npi
+
+list_npi()
