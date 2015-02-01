@@ -7,4 +7,4 @@ wb = load_workbook(filename=file_name)
 ws = wb.active
 
 for row in ws.rows:
-    print row[0].value
+    print(row[0].value)
