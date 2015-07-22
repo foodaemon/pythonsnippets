@@ -1,1 +1,1 @@
-6ebf649e-3097-11e5-906e-bc5ff483b4f5
+print('Hello world')
